@@ -45,7 +45,7 @@ export default function App() {
                 // Usando um placeholder que combina com as cores do tema (já que não temos o arquivo local)
                 src={FotoPerfil}
                 alt="Foto de Perfil"
-                className="w-25 h-25 sm:w-30 sm:h-30 rounded-full object-cover mb-5 shadow-2xl border-2 border-[#C9AE7B]/40 transition-transform duration-500 group-hover:scale-105"
+                className="w-25 h-25 sm:w-30 sm:h-30 r object-cover mb-5 shadow-2xl border-2 border-[#C9AE7B]/40 transition-transform duration-500 group-hover:scale-105"
               />
               {/* Efeito de brilho sutil atrás da foto */}
               <div className="absolute inset-0 rounded-full bg-[#C9AE7B] opacity-0 blur-xl group-hover:opacity-20 transition-opacity duration-500 -z-10"></div>
@@ -70,7 +70,7 @@ export default function App() {
                 className="group relative flex items-center p-4 sm:py-5 sm:px-6 rounded-2xl bg-[#F8F3ED]/5 backdrop-blur-md border border-[#C9AE7B]/20 text-[#F8F3ED] transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#F8F3ED]/10 hover:border-[#C9AE7B]/60 hover:shadow-[0_8px_30px_rgb(201,174,123,0.15)] overflow-hidden"
               >
                 {/* Efeito de brilho interno no card ao passar o mouse */}
-                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-[#C9AE7B]/5 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] skew-x-12"></div>
+                <div className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-[#C9AE7B]/5 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] skew-x-12"></div>
 
                 {/* Ícone */}
                 <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#C9AE7B]/10 text-[#C9AE7B] mr-4 group-hover:scale-110 transition-transform duration-300 z-10">
