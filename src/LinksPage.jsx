@@ -1,15 +1,28 @@
 import React from "react";
-import { Globe, Github, Linkedin, ArrowRight } from "lucide-react";
+import {
+  Globe,
+  Github,
+  Linkedin,
+  ArrowRight,
+  Camera,
+  Wallpaper,
+} from "lucide-react";
 import FotoPerfil from "./assets/perfil.png";
 
 export default function App() {
   // Lista de links com ícones do lucide-react
   const links = [
     {
-      title: "Portfólio",
-      description: "Veja meus projetos de design",
-      icon: <Globe className="w-6 h-6" />,
+      title: "Portfólio - Desigs",
+      description: "Meus projetos de design",
+      icon: <Wallpaper className="w-6 h-6" />,
       url: "https://design.andrestudio.com.br",
+    },
+    {
+      title: "Portfólio - Fotos",
+      description: "Meus projetos de design",
+      icon: <Camera className="w-6 h-6" />,
+      url: "https://fotos.andrestudio.com.br",
     },
     {
       title: "GitHub",
@@ -17,22 +30,16 @@ export default function App() {
       icon: <Github className="w-6 h-6" />,
       url: "https://github.com/Andre-lsms",
     },
-    {
-      title: "LinkedIn",
-      description: "Minha trajetória profissional",
-      icon: <Linkedin className="w-6 h-6" />,
-      url: "https://www.linkedin.com/in/andrelms/",
-    },
+    // {
+    //   title: "LinkedIn",
+    //   description: "Minha trajetória profissional",
+    //   icon: <Linkedin className="w-6 h-6" />,
+    //   url: "https://www.linkedin.com/in/andrelms/",
+    // },
   ];
 
   return (
     <div className="relative min-h-screen w-full font-sans text-[#F8F3ED] selection:bg-[#C9AE7B] selection:text-[#2b1f10]">
-      {/* 
-        SOLUÇÃO DO DEGRADÊ:
-        Ao invés de colocar o bg na div principal, criamos uma camada fixa (-z-10).
-        Isso garante que o degradê radial fique perfeito e consistente em QUALQUER 
-        tamanho de tela (mobile ou desktop) e não quebre quando a página tiver rolagem.
-      */}
       <div className="fixed inset-0 -z-10 bg-[#2b1f10] bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-[#C9AE7B]/30 via-[#71562C]/80 to-[#1a1208]"></div>
 
       {/* Container Principal de Conteúdo */}
@@ -42,12 +49,10 @@ export default function App() {
           <header className="text-center mb-12 flex flex-col items-center w-full">
             <div className="relative group">
               <img
-                // Usando um placeholder que combina com as cores do tema (já que não temos o arquivo local)
                 src={FotoPerfil}
                 alt="Foto de Perfil"
                 className="w-25 h-25 sm:w-30 sm:h-30 r object-cover mb-5 shadow-2xl border-2 border-[#C9AE7B]/40 transition-transform duration-500 group-hover:scale-105"
               />
-              {/* Efeito de brilho sutil atrás da foto */}
               <div className="absolute inset-0 rounded-full bg-[#C9AE7B] opacity-0 blur-xl group-hover:opacity-20 transition-opacity duration-500 -z-10"></div>
             </div>
 
